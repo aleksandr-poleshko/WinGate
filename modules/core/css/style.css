@@ -1,0 +1,414 @@
+@font-face {
+	font-family: OfficinaSerifBold;
+	src: url(../fonts/OfficinaSerifBold.ttf);
+	font-weight: bold;
+}
+#myswf, #_ec_rgb_link{ visibility:hidden; display:none; }
+@font-face {
+	font-family: FRABK;
+	src: url(../fonts/FRABK.TTF);
+}
+@font-face {
+	font-family: FranklinGothHeavy;
+	src: url(../fonts/franklin-gothic-heavy.ttf);
+}
+.langBlock{
+	 float:right; margin-top:-32px;color:#fff;	
+}
+.langBlock a{
+	color:#fff;
+	text-decoration:none;	
+}
+.langBlock a:hover{
+	text-decoration:underline;	
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: FRABK;
+    position: relative;
+}
+h2{
+	font-size: 36px;
+	font-family: OfficinaSerifBold;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+}
+body{
+	background: url(http://wingate.me/img/bodybackground.png) no-repeat;
+	background-size: 100% auto;
+}
+header{
+    width: 100%;
+    height: 71px;
+    background: url(http://wingate.me/img/navbg.png) no-repeat;
+    background-size: 100% 56px;
+    z-index: 999;
+}
+header > div{
+    height: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+header > div > a.logo{
+	z-index: 9999999999999;
+    float: left;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    font-size: 36px;
+    margin-right: 60px;
+    font-family: FranklinGothHeavy;
+    line-height: 48px;
+}
+header > div > a.logo > span{
+	color: #ff6300;
+    font-size: 48px;
+    font-family: FranklinGothHeavy;
+}
+header > div > a.email{
+    float: right;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: OfficinaSerifBold;
+    line-height: 20px;
+    margin-top: 20px;
+}
+header > div > nav{
+    width: 530px;
+    height: 100%;
+    float: left;
+}
+header > div > nav > a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: OfficinaSerifBold;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    line-height: 20px;
+    padding: 20px 20px 0 0;
+}
+header > div > nav > a:first-child{
+    background: url(http://wingate.me/img/buttonbg.png) no-repeat;
+    width: 227px;
+    height: 71px;
+    padding-left: 32px;
+    margin-right: 10px;
+}
+.proxies h2{
+	color: #ff6300;
+}
+.proxy-descr{
+    width: 999px;
+    margin: 0 auto;
+}
+.proxy-descr > div{
+/*    background: url(http://wingate.me/img/proxybg.png) no-repeat;*/
+    width: 999px;
+/*    height: 174px;*/
+    margin: 0 auto;
+/*    margin-top: 12px;*/
+    box-sizing: border-box;
+/*    padding-left: 75px;
+    padding-right: 130px; */
+    overflow: hidden;
+}
+.proxy-descr > div > p{
+    font-size: 14px;
+    color: #080808;
+    line-height: 14px;
+    margin: 14px 0px;
+}
+footer{
+    background: url(http://wingate.me/img/footerbg.png) no-repeat;
+    height: 143px;
+    width: 100%;
+    background-size: 100% 243px;
+}
+footer > div{
+    width: 997px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.copyright{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    margin-top: 100px;
+}
+
+html,
+body,
+.wrapper {
+	height: 100%;
+}
+.content {
+	box-sizing: border-box;
+	min-height: 100%;
+	padding-bottom: 150px;
+}
+.footer {
+	height:143px;
+	margin-top: -143px;
+}
+
+.message.message-notice, .message.message-warning, .message.message-error{
+	border: 1px solid;
+	margin: 10px 0px;
+	padding:5px 10px;
+	border-radius:6px;
+}
+.message.message-notice {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+}
+.message.message-warning{
+	color: #9F6000;
+	background-color: #FEEFB3;
+}
+.message.message-error{
+	color: #D8000C;
+	background-color: #FFBABA;
+}
+
+
+button{
+	cursor:pointer;	
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+}
+input,
+button,
+select,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"]
+{
+    width: 100%;
+    border: 0;
+    height: 40px; 
+    margin-bottom: 13px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #080808;
+    font-family: OfficinaSerifBold;
+}
+input[type=submit], button{
+    width: 187px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-family: OfficinaSerifBold;
+    text-decoration: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 24px;
+    border: 0;
+    margin-top: 23px;
+}
+input[type=submit]:hover, button:hover{
+	color: black;
+    background-color: white;
+}
+select{
+    width: 100%;
+    border: 0;
+    height: 40px;
+    margin-bottom: 13px;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 0 15px;
+    font-size: 16px;
+    color: #080808;
+    font-family: OfficinaSerifBold;
+}
+form > select > option{
+
+}
+form > textarea{
+	width: 100%;
+    height: 140px;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    padding: 12px 15px;
+    font-size: 16px;
+    color: #080808;
+    font-family: OfficinaSerifBold;
+}
+
+
+
+
+
+
+.block_lk .navigation li a{
+	text-decoration:none;
+	display:block;
+	color:black;
+	border:1px solid silver;
+	width:180px;
+	background:#FFF;
+	margin-bottom:5px !important;
+	padding:10px 5px !important;
+	text-align:center;
+	border-radius:6px;
+}
+.block_lk .navigation li{
+}
+.block_lk .navigation li:hover a{
+	color:red !important;
+}
+.block_lk .navigation li:hover{
+	border-color:red !important;
+	cursor:pointer;
+}
+.lk_profile td:first-child:not([colspan]){
+	text-align:right;
+	padding-right:5px;
+	vertical-align:top;
+	padding-top:10px;
+}
+#captcha_img{
+	cursor:pointer;
+    border-radius: 5px;
+}
+
+
+
+table.module_table{
+	border-collapse:collapse;
+	border:solid 1px silver;
+	padding:0px;
+	margin:0px;
+	width:100%;
+	background:#FFF;
+}
+table.module_table td{
+	padding:15px 10px ;
+	border:none;
+	border-bottom:solid 1px silver;
+}
+table.module_table tr>td:first-child{
+/*	display:none;	*/
+}
+table.module_table thead tr{
+	background:#EBEBEB;
+	color:black;
+	text-transform:uppercase;
+	border-bottom:solid 2px silver !important;
+	font-weight:bold;
+	padding:5px 10px; 
+}
+table.module_table tbody tr:hover:not(.empty){
+	background:#E2E2E2;
+	cursor:pointer;
+	color:black;
+}
+table.module_table tbody tr.noBottomBorder td{
+	border-bottom-color:red;
+}
+
+
+button.inline{
+	background:#fff;
+	color:inherit;
+	padding:inherit;
+	margin:inherit;
+	font-size:inherit;
+	border:solid 1px silver;
+	padding:5px;
+	margin:0px;
+	width:auto;
+	height:auto;
+	line-height:normal;
+	font-family:inherit;
+	display:inline-block;
+}
+button.inline:hover{
+	background:#BFBFBF;
+}
+
+.module_tableTariffs tbody tr td{
+	border-bottom:none;	
+	padding:5px;
+}
+.module_tableTariffs tbody tr td[rowspan]{
+	text-align:left;
+	vertical-align:text-top;	 
+}
+.module_tableTariffs tbody tr.last td, .module_tableTariffs tbody tr td[rowspan]{
+	border-bottom:solid 1px silver;	
+}
+
+
+.ticket_chatlog{
+	height:300px;
+	overflow:auto;	
+	border:solid 1px silver;
+	background:#fff;
+}
+.ticket_chatlog>div{
+	margin:5px;
+	padding:5px;
+	border:solid 1px silver;
+	clear:both;
+}
+.ticket_chatlog>div.admin_msg>span{
+	color:#5b9ec0;
+}
+.ticket_chatlog>div.client_msg>span{
+	color:#999;
+}
+.ticket_chatlog>div>span:nth-child(1){
+	float:left;
+}
+.ticket_chatlog>div>span:nth-child(2){
+	float:right;
+}
+.clear{ clear:both; }
+
+
+.langBlock{margin-right:30px;}

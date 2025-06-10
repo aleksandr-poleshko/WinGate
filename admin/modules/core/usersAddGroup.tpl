@@ -1,0 +1,99 @@
+<div class="page_body box-shadow jcms_pageAdd">
+    <h4 style="margin-top:0px;"><u onclick="window.JCMS_usersActiveList='groups';JCMS.navigator('/core/users/');" class="cursor">Пользователи и группы</u> &rarr; Создание группы</h4>
+    <form>
+        <table class="table_pageAdd" width="100%">
+            <tr>
+                <td class="require">Название группы</td>
+                <td><input type="text" value="{GROUP_TITLE}" name="group_title" /></td>
+            </tr>
+            <tr>
+                <td class="td_multiLine">Описание</td>
+                <td><textarea class="form-control" name="group_descr"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left !important;">Выберите необходимые модули и полномочия для этой группы пользователей :</td>
+            </tr>
+            <tr>
+                <td colspan></td>
+                <td style="display:inline-block">{PERM_TABLE}</td>
+            </tr>
+        </table>
+        <div style="float:right;">
+            <button class="btn btn-success jcms_pageAddPageSave">Создать группу</button>
+        </div>
+        <div class="clear"></div>
+        <input type="hidden" name="form_submit" value="1" />
+    </form>
+</div>
+<style type="text/css">
+.table_pageAdd thead td{
+	text-align:left !important;	
+}
+
+.table_pageAdd tr>td:first-child{
+	text-align:right !important;
+	width:200px !important;
+	padding-right:5px;
+}
+.table_pageAdd tr>td:first-child{
+	width:400px;
+}
+.table_pageAdd tr>td:not([colspan]):first-child:after{
+	content:" :"
+}
+.table_pageAdd tr>td.require:before{
+	content:"* ";
+	color:red;
+}
+.table_pageAdd tr>td{
+	padding:3px;
+}
+.td_multiLine{
+	vertical-align:top !important;	
+}
+ul.perm_list>li{
+	border-bottom:solid 1px silver;
+	margin-bottom:10px;
+}
+ul.perm_list{
+	padding-left:0px;	
+}
+ul.perm_list>li{
+	padding-left:10px;	
+	padding-right:10px;
+}
+ul.perm_list li div{
+	padding-left:6px;
+	display:none;
+}
+ul.perm_list li div ul{
+	border-left:solid 1px silver;
+	padding-left:10px;
+}
+ul.perm_list li{
+	list-style:none;	
+	text-align:left;
+	font-weight:normal !important;
+	white-space:nowrap !important;
+}
+ul.perm_list li div ul label{
+	font-weight:normal;	
+}
+</style>
+<script>
+$("ul.perm_list>li>input[type=checkbox]").change(function(e) {
+    if( $(this).prop('checked') ){
+		$('div', $(this).parent()).show("blind");
+		$('div input[type=checkbox]', $(this).parent()).prop('checked', true);
+	} else {
+		$('div', $(this).parent()).hide("blind");
+		$('div input[type=checkbox]', $(this).parent()).prop('checked', false);
+	}
+});
+</script>
+
+
+
+
+
+

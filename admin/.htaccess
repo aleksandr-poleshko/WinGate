@@ -1,0 +1,46 @@
+DirectoryIndex init.php
+Options -Indexes
+
+## Модуль ЧПУ
+RewriteEngine On
+RewriteBase /
+
+# определяем смещение скрипта относительно корня для правильной работы модуля ЧПУ.
+RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
+RewriteRule ^(.*)$ - [E=BASE:%1]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^favicon.ico$ %{ENV:BASE}modules/core/images/favicon.ico [L]
+
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  <IfModule mod_setenvif.c>
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+  </IfModule>
+</IfModule>
+
+# убираем слеш(/) в конце адреса
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} /$ [NC]
+RewriteRule ^(.*)(/)$ %{ENV:BASE}$1 [L,R=301]
+
+<Files ~ "\.(txt|zip)$">
+deny from all
+</Files>
+
+# редирект на www поддомен 
+#RewriteCond %{HTTP_HOST} !^www.
+#RewriteRule (.*) http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# ЧПУ ссылки
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !(js|css|php|tpl)$
+RewriteRule ^(.*)$ %{ENV:BASE}init.php?%{QUERY_STRING} [L]

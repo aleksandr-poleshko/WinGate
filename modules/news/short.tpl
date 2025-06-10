@@ -1,0 +1,1 @@
+<table style="margin-right:10px;" class="module_table"><thead> <tr> <td>{NEWS_TITLE}</td><td align="right">{NEWS_DATE}</td> </tr></thead> <tbody><tr class="empty "><td colspan="2">{NEWS_TEXT}</td></tr> </tbody></table><br>
